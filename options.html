@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Study Options</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Word Study Options</h1>
+    <p class="muted">
+      Add, search, and edit your words here.
+      This page will be available as
+      <code>chrome-extension://YOUR_EXTENSION_ID/options.html</code>.
+    </p>
+
+    <div class="card">
+      <h2>Add new word</h2>
+      <div class="row">
+        <div style="flex:2; min-width:240px;">
+          <label for="wordInput" class="small">Word</label>
+          <input id="wordInput" placeholder="example: diligent" />
+        </div>
+        <div style="flex:3; min-width:240px;">
+          <label for="meaningInput" class="small">Meaning / note</label>
+          <input id="meaningInput" placeholder="hard-working" />
+        </div>
+      </div>
+      <div class="row" style="margin-top: 12px;">
+        <button id="addBtn">Add word</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row" style="justify-content: space-between; align-items: end;">
+        <div style="flex: 1; min-width: 260px;">
+          <h2 style="margin-bottom: 8px;">Saved words</h2>
+          <label for="filterInput" class="small">Filter words</label>
+          <input id="filterInput" placeholder="Search by word or meaning" />
+        </div>
+        <div>
+          <button id="clearFilterBtn" class="secondary">Clear filter</button>
+        </div>
+      </div>
+
+      <div id="resultInfo" class="small" style="margin-top: 10px;"></div>
+      <div id="wordList" class="list" style="margin-top: 12px;"></div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="options.js"></script>
+</body>
+
+</html>

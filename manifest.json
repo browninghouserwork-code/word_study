@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Word Study Side Panel",
+  "version": "1.0.0",
+  "description": "Add English words and review them with spaced repetition in a Chrome side panel.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Word Study"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

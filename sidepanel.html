@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Study</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="sidepanel-layout">
+    <div class="card">
+      <h2>Quick add</h2>
+      <input id="quickWord" placeholder="Add a word" />
+      <input id="quickMeaning" placeholder="Meaning / note" style="margin-top:8px;" />
+      <div class="row" style="margin-top:10px;">
+        <button id="quickAddBtn">Add</button>
+        <button id="openOptionsBtn" class="secondary">Edit all</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Review</h2>
+      <div id="reviewEmpty" class="muted">No words are due right now 🎉</div>
+      <div id="reviewBox" class="hidden">
+        <div id="reviewWord" class="review-word"></div>
+        <div id="reviewMeaning" class="review-meta muted"></div>
+        <div class="small" id="reviewDueInfo"></div>
+        <hr />
+        <div class="small">Did you remember this word?</div>
+        <div class="row" style="margin-top:10px;">
+          <button id="yesBtn" class="success">Yes</button>
+          <button id="noBtn" class="danger">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Next due words</h3>
+      <div id="upcomingList" class="list"></div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>
